@@ -16,4 +16,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: whoami
+          script: |
+            cd AmiBot
+            git pull
+            docker compose up -d --no-deps --build

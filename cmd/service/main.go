@@ -28,7 +28,7 @@ func main() {
 		if update.Message != nil { // If we got a message
 			log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, fmt.Sprintf("lol"))
+			msg := tgbotapi.NewMessage(update.Message.Chat.ID, fmt.Sprintf("trash"))
 			msg.ReplyToMessageID = update.Message.MessageID
 
 			bot.Send(msg)
